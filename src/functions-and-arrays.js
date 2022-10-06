@@ -121,10 +121,9 @@ function doesWordExist(wordsFind, wordToFind) {
     return false;
   }
   else {
-    return true
+    return true;
   }
 }
-
 
 
 // Iteration #7: Count repetition
@@ -142,7 +141,21 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() { }
+let repeatedWord = "matter";
+
+function howManyTimes(wordsCount, repeatedWord) {
+  let counter = 0;
+  for (let i = 0; i < wordsCount.length; i++) {
+    const wordsCountElement = wordsCount[i];
+    if (wordsCountElement === repeatedWord) {
+      counter += 1
+    }
+    else {
+      continue;
+    }
+  }
+  return counter;
+}
 
 
 
