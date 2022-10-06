@@ -39,8 +39,29 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() { }
+function sum(mixedArray) {
+  const transformedArray = [];
 
+  for (let i = 0; i < mixedArray.length; i++) {
+
+    const specificItem = mixedArray[i];
+
+    if (typeof specificItem === "number") {
+      transformedArray.push(specificItem);
+    }
+    else if (typeof specificItem === "string") {
+      transformedArray.push(specificItem.length);
+    }
+    else if (typeof specificItem === "boolean") {
+      transformedArray.push(Number(specificItem));
+    }
+    // else if (typeof specificItem === "array" || typeof specificItem === "object") {
+    else {
+      throw Error("Unsupprted data type");
+    }
+  }
+  return sumNumbers(transformedArray);
+}
 
 
 // Iteration #4: Calculate the average
