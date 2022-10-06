@@ -36,10 +36,9 @@ function sumNumbers(numbers) {
   return sumNum;
 }
 
-
-
 // Iteration #3.1 Bonus:
-function sum() { }
+function sum() {
+}
 
 
 
@@ -47,7 +46,14 @@ function sum() { }
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() { }
+function averageNumbers(numbersAvg) {
+  if (numbersAvg.length === 0) {
+    return null;
+  }
+  const result = sumNumbers(numbersAvg);
+  const avg = result / numbersAvg.length;
+  return avg;
+}
 
 
 // Level 2: Array of strings
