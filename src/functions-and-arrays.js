@@ -108,12 +108,22 @@ function uniquifyArray(wordsUnique) {
   }
 }
 
-
-
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+const wordToFind = 'machine';
 
-function doesWordExist() { }
+function doesWordExist(wordsFind, wordToFind) {
+  if (wordsFind.length === 0) {
+    return null;
+  }
+
+  else if ((wordsFind.indexOf(wordToFind)) === -1) {
+    return false;
+  }
+  else {
+    return true
+  }
+}
 
 
 
