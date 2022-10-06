@@ -88,7 +88,25 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() { }
+
+function uniquifyArray(wordsUnique) {
+  const uniqueArr = [];
+  if (wordsUnique.length === 0) {
+    return null;
+  }
+  else {
+    for (let i = 0; i < wordsUnique.length; i++) {
+      const arrWord = wordsUnique[i];
+      if (uniqueArr.indexOf(arrWord) === - 1) {
+        uniqueArr.push(arrWord);
+      }
+      else {
+        continue;
+      }
+    }
+    return uniqueArr;
+  }
+}
 
 
 
