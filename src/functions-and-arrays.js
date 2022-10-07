@@ -166,9 +166,26 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() { }
+function greatestProduct(matrixtotest) {
+  let greatest = 0;
 
+  let horizontal = 0;
+  let vertical = 0;
 
+  // horizontal products
+  for (let i = 0; i < matrix.length; i++) {
+    const smallArray = matrix[i];
+
+    for (let j = 0; j < smallArray.length - 3; j++) {
+      let horizontalProduct = smallArray[i] * smallArray[i + 1] * smallArray[i + 2] * smallArray[i + 3];
+      if (horizontalProduct > horizontal) {
+        horizontal = horizontalProduct
+      }
+
+    }
+  }
+  return horizontal;
+}
 
 
 // The following is required to make unit tests work.
