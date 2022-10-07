@@ -57,7 +57,7 @@ function sum(mixedArray) {
     }
     // else if (typeof specificItem === "array" || typeof specificItem === "object") {
     else {
-      throw Error("Unsupprted data type");
+      throw Error("Unsupported data type sir or ma'am");
     }
   }
   return sumNumbers(transformedArray);
